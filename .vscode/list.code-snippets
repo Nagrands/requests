@@ -1,12 +1,12 @@
 {
-	"GreenTextTransformation": {
-		"prefix": "GreenTextTransformation",
+	"GreenText": {
+		"prefix": "delGreenText",
 		"body": [
 			"${1:${TM_SELECTED_TEXT/⁕|Салат Лолло |Салат //g}}"
 		],
 		"description": "Преобразует текст, удаляя символ '⁕', 'Салат Лолло', и 'Салат', оставляя остальной текст"
 	},
-	
+
 	"delete_numbers_and_units": {
 		"prefix": ["noNumbersUnits"],
 		"body": [
@@ -14,31 +14,7 @@
 		],
 		"description": "Удаляет: числа, слова 'кг' и 'шт', точки (.), запятые (,)"
 	},
-	
-	"Remove numbers, punctuation, and capitalize each line": {
-		"prefix": "RemovePunctuation",
-		"body": [
-			"${TM_SELECTED_TEXT/[^a-zA-Z\n⁕]+//g}",
-			"${TM_SELECTED_TEXT/шт$//g}",
-			"${TM_SELECTED_TEXT/^(.)|\n(.)/${1:/capitalize}${2:/capitalize}/g}"
-		],
-		"description": "Removes numbers, punctuation, and capitalizes each line"
-	},
-	
-	"Select": {
-		"prefix": "select",
-		"body": [
-			"[${1:array}]\n{---------------\n$TM_SELECTED_TEXT\n---------------}\n$0"
-		]
-	},
-	
-	"WR": {
-		"prefix": "wr",
-		"body": [
-			"${TM_SELECTED_TEXT/[' ']/ /gi}"
-		]
-	},
-	
+
 	"Авокадо": {
 		"prefix": "Авокадо",
 		"body": [

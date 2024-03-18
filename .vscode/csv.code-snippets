@@ -1,0 +1,10 @@
+{
+    "Convert Selection to CSV": {
+        "prefix": "csv",
+        "body": [
+            "\"Наименование\",\"Количество\"",
+            "${TM_SELECTED_TEXT/^(.+?)\\s+(\\S+)$/\"$1\",\"$2\"/gm}"
+        ],
+        "description": "Convert selected text to CSV format"
+    }
+}
