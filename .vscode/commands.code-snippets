@@ -1,0 +1,41 @@
+{
+	"Replace Commas with Dots": {
+		"prefix": "dots",
+		"body": [
+			"${TM_SELECTED_TEXT/\\,+/./g}"
+		],
+		"description": "Replace commas with dots in selected text"
+	},
+
+	"Remove Character ": {
+		"prefix": "remove ⁕",
+		"body": [
+			"${TM_SELECTED_TEXT/⁕//g}"
+		],
+		"description": "Remove character ⁕ from selected text"
+	},
+
+	"delete_numbers_and_units": {
+		"prefix": ["noNumbersUnits"],
+		"body": [
+			"${1:${TM_SELECTED_TEXT/(\\d+|кг|шт|[.,\\/()])//g}}"
+		],
+		"description": "Удаляет: числа, слова 'кг' и 'шт', точки (.), запятые (,)"
+	},
+
+	"Green": {
+		"prefix": "short green",
+		"body": [
+			"${1:${TM_SELECTED_TEXT/⁕|Салат Лолло |Салат//g}"
+		],
+		"description": "Преобразует текст, удаляя символ '⁕', 'Салат Лолло', и 'Салат', оставляя остальной текст"
+	},
+
+	"current_date_time": {
+		"prefix": "current_date_time",
+		"body": [
+			"$CURRENT_DATE.$CURRENT_MONTH - $CURRENT_HOUR:$CURRENT_MINUTE\n\n$0"
+		],
+		"description": "Current Date and time"
+	}
+}

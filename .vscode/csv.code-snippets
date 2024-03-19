@@ -1,10 +1,20 @@
 {
-    "Convert Selection to CSV": {
-        "prefix": "csv",
-        "body": [
-            "\"Наименование\",\"Количество\"",
-            "${TM_SELECTED_TEXT/^(.+?)\\s+(\\S+)$/\"$1\",\"$2\"/gm}"
-        ],
-        "description": "Convert selected text to CSV format"
-    }
+	"Convert Selection to CSV": {
+		"prefix": "csv",
+		"body": [
+			"\"Наименование\",\"Количество\"",
+			"${TM_SELECTED_TEXT/^(.+?)\\s+(\\S+)$/$1,$2/gm}"
+		],
+		"description": "Convert selected text to CSV format"
+	},
+
+	"CSV with Three Columns": {
+		"prefix": "csvThreeColumns",
+		"body": [
+			"\"Наименование\",\"Количество\",\"Цена\"",
+			"${1:Название товара},${2:Количество},${3:Цена}"
+		],
+		"description": "Create CSV with three columns: Name, Quantity, Price"
+	}
+
 }
